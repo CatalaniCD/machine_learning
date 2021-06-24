@@ -65,7 +65,8 @@ if __name__ == '__main__':
     for t in range(T):
         
         # iterate the data loop
-        for i in range(len(X_train)):
+        L = len(X_train)
+        for i in range(L):
             
             # select the data point and label
             X_, y_ = np.array([X_train[i][0], X_train[i][1]]), y_train[i]
@@ -94,7 +95,8 @@ if __name__ == '__main__':
     plt.show()
         
     error = 0
-    for i in range(len(X_test)):
+    L = len(X_test)
+    for i in range(L):
         
         # select the data point and label
         X_, y_ = np.array([X_test[i][0], X_test[i][1]]), y_test[i]
@@ -104,4 +106,4 @@ if __name__ == '__main__':
             
             error += 1
 
-    print(error)
+    print('Accuracy Score : ', 1 - (error/ L))
