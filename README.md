@@ -1,5 +1,5 @@
 # machine_learning
-This repository is about machine learing
+Machine Learing Algorithms and Tools :
   * Scalers
   * Linear models
   * Neural Networks
