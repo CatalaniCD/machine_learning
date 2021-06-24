@@ -9,3 +9,4 @@
   * Neural Networks
   * Pipelines
   * Cross Validation
+  * Grid Search
