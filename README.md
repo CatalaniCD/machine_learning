@@ -7,6 +7,6 @@
   
 ### Machine Learning Methodology and Tools:
   * Neural Networks
-  * Pipelines
+  * [Pipelines](https://github.com/CatalaniCD/machine_learning/blob/main/pipeline.py)
   * Cross Validation
   * Grid Search
