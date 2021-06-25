@@ -43,7 +43,7 @@ class Neuron():
         self.epsilon = 1e-03
         
     def scalar_product(self, X):
-        """ Linear Combination """
+        """ Dot Product / Matmul """
         return np.dot(self.weights.T, X) + self.bias
     
     def sigmoid(self, z):
@@ -60,6 +60,7 @@ class Neuron():
         return 0.5 * (y - y_hat) ** 2
     
     def loss_derivative(self, y, y_hat):
+        """ Loss derivative """
         return - (y - y_hat)
           
     def training(self, X, y, T = 25):
@@ -89,7 +90,6 @@ class Neuron():
                 if loss > self.epsilon:
                     
                     """
-                    
                     # derivatives
                     loss_derivative
                     activation_derivative
@@ -101,8 +101,6 @@ class Neuron():
                     # new wights, bias
                     weigths = weights - ( learning_rate * weights_update )
                     bias = bias - (learning_rate * bias_update.sum( axis = 0 ) )
-                    
-                
                     """
                     
                     # derivatives
@@ -172,9 +170,7 @@ if __name__ == '__main__':
     plt.show()
 
     neuron = Neuron()
-    
     neuron.training(X_train, y_train)
-    
     neuron.accuracy(X_test, y_test)
     
     plt.scatter(X_test[:, 0], X_test[:, 1], c=[neuron.predict(x) for x in X_test], cmap=plt.cm.coolwarm)
