@@ -7,7 +7,15 @@
   * [SVM - Support Vector Machine](https://github.com/CatalaniCD/machine_learning/blob/main/support_vector_machine.py)
   * [Neuron](https://github.com/CatalaniCD/machine_learning/blob/main/neuron.py)
   * Neural Networks
-  
+
+  * Recommender Systems
+
+  * K-Nearest Neighbors
+  * K-Means / K-Medoids
+  * Gaussian Mixtures / EM Algorithm
+
+  * Reinforcement Learning
+
 ### Machine Learning Methodology and Tools:
   
   * [Pipelines](https://github.com/CatalaniCD/machine_learning/blob/main/pipeline.py)
