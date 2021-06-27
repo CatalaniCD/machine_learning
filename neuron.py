@@ -54,7 +54,7 @@ class Neuron():
     
     def sigmoid(self, z):
         """ Activation Function """
-        # sigmoid function domain {-1, 1}, S shaped function
+        # sigmoid function domain {0, 1}, S shaped function
         return 1 / (1 + np.exp(-z))
     
     def sigmoid_derivative(self, z):
