@@ -5,7 +5,7 @@ Created on Wed Jun 23 21:52:43 2021
 
 @author: q
 
-Goal : Create a perceptron algorithm
+Goal : Create a Perceptron algorithm
 
 """
 # =============================================================================
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     X, y = make_blobs(n_samples = 500, 
                       centers = 2, 
                       random_state = 0, 
-                      cluster_std = 0.5)
+                      cluster_std = 0.8)
     
     y = pd.Series(y).replace(0, -1).values
 
@@ -50,18 +50,14 @@ if __name__ == '__main__':
   
     # perceptron
     
-    # initalize Weight Vectors to 0, same size as features
-    # W = np.zeros(2)
+   # initalize Weight Vectors to random values, same size as features
+    W = np.random.uniform(low = -1.0, high = 1.0, size = len(X_train[0]))
     
-    # or
+    # initalize b to random value
+    b = np.random.uniform(low = -1.0, high = 1.0, size = None)
     
-    # initialize Weight Vectors to random, same size as features
-    # W = np.random.normal(loc = 0.0, scale = 1.0, size = len(X_train[0]))
-    W = np.random.uniform(low = 0.0, high = 1.0, size = len(X_train[0]))
-    
-    # initalize b to 0
-    b = 0
     T = 100
+    learning_rate = 0.01 
     
     # max iteration for convergence 
     for t in range(T):
@@ -74,11 +70,10 @@ if __name__ == '__main__':
             X_, y_ = np.array([X_train[i][0], X_train[i][1]]), y_train[i]
             
             # evaluate the decision boundary
-            # print((np.dot(W.T, X_) + b) /  np.linalg.norm(W))
-            if ( y_ * (np.dot(W.T, X_) + b) /  np.linalg.norm(W)) <= 0:
+            if np.sign( y_ * (np.dot(W.T, X_) + b) ) < 0:
                 
                 # update decision boundary
-                W = W + (X_ * y_) * 0.01 # learning rate
+                W = W + learning_rate * (X_ * y_) 
                 b = b + y_
         
     error = 0
@@ -89,7 +84,7 @@ if __name__ == '__main__':
         X_, y_ = np.array([X_test[i][0], X_test[i][1]]), y_test[i]
         
         # evaluate the decision boundary
-        if ( y_ * (np.dot(W.T, X_) + b) /  np.linalg.norm(W)) <= 0:
+        if np.sign( y_ * (np.dot(W.T, X_) + b) ) < 0:
             
             error += 1
     
