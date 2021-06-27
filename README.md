@@ -1,11 +1,12 @@
 # machine_learning
 ### Machine Learing Algorithms Concepts:
   * [Scalers](https://github.com/CatalaniCD/machine_learning/blob/main/scalers.py)
-  * [Metrics](https://github.com/CatalaniCD/machine_learning/blob/main/under_dev.py)
+  * Metrics
   * [Perceptron](https://github.com/CatalaniCD/machine_learning/blob/main/perceptron.py)
   * [SGD Perceptron](https://github.com/CatalaniCD/machine_learning/blob/main/perceptron_sgd.py)
+  * [SVM - Support Vector Machine](https://github.com/CatalaniCD/machine_learning/blob/main/support_vector_machine.py)
   * [Neuron](https://github.com/CatalaniCD/machine_learning/blob/main/neuron.py)
-  * [Neural Networks](https://github.com/CatalaniCD/machine_learning/blob/main/under_dev.py)
+  * Neural Networks
   
 ### Machine Learning Methodology and Tools:
   
