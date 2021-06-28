@@ -126,7 +126,7 @@ if __name__ == '__main__':
         X_, y_ = np.array([X_test[i][0], X_test[i][1]]), y_test[i]
         
         # evaluate the decision boundary
-        if ( y_ * (np.dot(W.T, X_) + b) / np.linalg.norm(W)) <= 1:
+        if ( y_ * (np.dot(W.T, X_) + b) ) <= 1:
             
             error += 1
     
