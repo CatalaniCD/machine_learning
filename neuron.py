@@ -106,7 +106,7 @@ class Neuron():
                     activation_derivative
                     
                     # updates                                        
-                    weights_update = loss_derivative * activation_derivative * activation
+                    weights_update = loss_derivative * activation_derivative * X_
                     bias_update = loss_derivative *  activation_derivative
                     
                     # new wights, bias
