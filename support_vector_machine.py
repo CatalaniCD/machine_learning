@@ -76,7 +76,7 @@ if __name__ == '__main__':
                                                         train_size = 0.5, 
                                                         random_state=0)
   
-    # perceptron
+    # support vector machine
        
     # initialize Weight Vectors to random, same size as features
     W = np.random.uniform(low = -1.0, high = 1.0, size = len(X_train[0]))
