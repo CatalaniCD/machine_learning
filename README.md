@@ -43,5 +43,4 @@ A computer program interacts with a dynamic environment in which it must perform
 
 Source : https://en.m.wikipedia.org/wiki/Machine_learning
 
-##### 6.86x - Machine Learning with Python-From Linear Models to Deep Learning
-##### https://courses.edx.org/certificates/d103b21619db422c98ada4f21a1663bd
+##### 6.86x - Machine Learning with Python-From Linear Models to Deep Learning : https://courses.edx.org/certificates/d103b21619db422c98ada4f21a1663bd
