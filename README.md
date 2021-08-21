@@ -58,7 +58,7 @@ Source : https://en.m.wikipedia.org/wiki/Machine_learning
       Non-linear classification, kernels
       Learning features, Neural networks
       Deep learning, back propagation
-      Recurrent neural networks
+      Convolutional neural networks
       Recurrent neural networks
       Generalization, complexity, VC-dimension
       Unsupervised learning: clustering
