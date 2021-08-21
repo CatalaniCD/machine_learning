@@ -47,3 +47,29 @@ Source : https://en.m.wikipedia.org/wiki/Machine_learning
 
 #### Certification
 ##### [6.86x - Machine Learning with Python-From Linear Models to Deep Learning](https://courses.edx.org/certificates/d103b21619db422c98ada4f21a1663bd)
+      
+      Lectures :
+      Introduction
+      Linear classifiers, separability, perceptron algorithm
+      Maximum margin hyperplane, loss, regularization
+      Stochastic gradient descent, over-fitting, generalization
+      Linear regression
+      Recommender problems, collaborative filtering
+      Non-linear classification, kernels
+      Learning features, Neural networks
+      Deep learning, back propagation
+      Recurrent neural networks
+      Recurrent neural networks
+      Generalization, complexity, VC-dimension
+      Unsupervised learning: clustering
+      Generative models, mixtures
+      Mixtures and the EM algorithm
+      Learning to control: Reinforcement learning
+      Reinforcement learning continued
+      Applications: Natural Language Processing
+      
+      Projects :
+      Automatic Review Analyzer
+      Digit Recognition with Neural Networks
+      Reinforcement Learning
+
