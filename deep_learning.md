@@ -12,7 +12,7 @@ The adjective "deep" in deep learning refers to the use of multiple layers in th
 
 ### Certification 
 
-  [Deep Learning Fundamentals with Keras](https://courses.edx.org/certificates/cab03b2677004102b55f5e380524b8a6)
+### [Deep Learning Fundamentals with Keras](https://courses.edx.org/certificates/cab03b2677004102b55f5e380524b8a6)
 
     Module1 - Introduction to Deep Learning
     - Introduction to Deep Learning
