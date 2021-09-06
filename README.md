@@ -8,6 +8,8 @@ A subset of machine learning is closely related to computational statistics, whi
 
 Source : https://en.m.wikipedia.org/wiki/Machine_learning
 
+### [Deep Learning](https://github.com/CatalaniCD/machine_learning/blob/main/deep_learning.md)
+
 ### Machine Learing Algorithms Concepts:
   * [Scalers](https://github.com/CatalaniCD/machine_learning/blob/main/scalers.py)
   * Metrics
