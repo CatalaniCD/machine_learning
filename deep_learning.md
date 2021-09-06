@@ -1,6 +1,6 @@
 # Deep Learning
 
-[!alt text](https://github.com/CatalaniCD/machine_learning/blob/main/deep_logo.png)
+![alt text](https://github.com/CatalaniCD/machine_learning/blob/main/deep_logo.png)
 
 Deep learning (also known as deep structured learning) is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised.
 
