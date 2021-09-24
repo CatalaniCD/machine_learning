@@ -10,6 +10,8 @@ Source : https://en.m.wikipedia.org/wiki/Machine_learning
 
 ### [Deep Learning](https://github.com/CatalaniCD/machine_learning/blob/main/deep_learning.md)
 
+### [Expert Systems](https://github.com/CatalaniCD/machine_learning/blob/main/expert_systems.md)
+
 ### Machine Learing Algorithms Concepts:
   * [Scalers](https://github.com/CatalaniCD/machine_learning/blob/main/scalers.py)
   * Metrics
