@@ -12,6 +12,8 @@ Source : https://en.m.wikipedia.org/wiki/Machine_learning
 
 ### [Expert Systems](https://github.com/CatalaniCD/machine_learning/blob/main/expert_systems.md)
 
+### [Genetic Programming](https://github.com/CatalaniCD/machine_learning/blob/main/genetic_programming.md)
+
 ### Machine Learing Algorithms Concepts:
   * [Scalers](https://github.com/CatalaniCD/machine_learning/blob/main/scalers.py)
   * Metrics
