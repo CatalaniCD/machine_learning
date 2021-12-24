@@ -123,7 +123,7 @@ if __name__ == '__main__':
      
     y = y + 50
     
-    # define weights
+    # learning rate, weights, bias
     alpha = 0.001
     # W = np.random.normal(size = X.shape[1])
     # W = np.ones(shape = X.shape[1])
