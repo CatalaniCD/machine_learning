@@ -20,7 +20,7 @@ Source : https://en.m.wikipedia.org/wiki/Machine_learning
   * [Perceptron](https://github.com/CatalaniCD/machine_learning/blob/main/perceptron.py)
   * [SGD Perceptron](https://github.com/CatalaniCD/machine_learning/blob/main/perceptron_sgd.py)
   * [SVM - Support Vector Machine](https://github.com/CatalaniCD/machine_learning/blob/main/support_vector_machine.py)
-  * [Linear Regression w/gradient descent](https://github.com/CatalaniCD/machine_learning/blob/main/support_vector_machine.py)
+  * [Linear Regression w/gradient descent](https://github.com/CatalaniCD/machine_learning/blob/main/linear_regression.py)
   * [Neuron](https://github.com/CatalaniCD/machine_learning/blob/main/neuron.py)
   * Neural Networks
 
