@@ -38,7 +38,7 @@ GOAL : Develop a Linear Regression Algorithm with Numpy
         
       b : dL/db = dL/dz * dz/db
       
-      dL/dz = (u)**2 * du/dz = 2 * (true - pred) * 1
+      dL/dz = (u)**2 * du/dz = 2 * (pred - true) * 1
       
       dz/dw = x
       
