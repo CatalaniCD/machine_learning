@@ -39,18 +39,17 @@ class Neuron():
     """ Neuron Classifier Model """
     
     def __init__(self):
-        self.weights = np.array([])
-        self.bias = 0
+        self.weights = np.random.uniform(low = -1, high = 1, size = X.shape[1]) 
+        self.bias = np.random.uniform(low = -1, high = 1, size = None)   
         self.learning_rate = 0.1
         self.epsilon = 0.1
-        
     
     def loss_function(self, y, y_hat):
         """ Loss Function : Squared Loss """
         return 0.5 * (y - y_hat) ** 2
     
     def loss_derivative(self, y, y_hat):
-        return - (y - y_hat)
+        return 0.5 * 2 *  (y - y_hat) * (-1)
     
     def sigmoid(self, z):
         """ Activation Function """
@@ -78,8 +77,6 @@ class Neuron():
     def training(self, X, y, T = 100, VISUALIZE = False):
         """ Model Training """
         # initialize random weights and bias
-        self.weights = np.random.uniform(low = -1, high = 1, size = X.shape[1]) 
-        self.bias = np.random.uniform(low = -1, high = 1, size = None)   
         L = X.shape[0]
         update = 0
         for t in range(T):
@@ -94,8 +91,7 @@ class Neuron():
                 
                 # loss function
                 loss = self.loss_function(y_, activation)
-               
-    
+              
                 # check for loss magnitude
                 if loss > self.epsilon:
                     
