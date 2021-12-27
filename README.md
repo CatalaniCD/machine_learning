@@ -18,7 +18,7 @@ Source : https://en.m.wikipedia.org/wiki/Machine_learning
   * [Scalers](https://github.com/CatalaniCD/machine_learning/blob/main/scalers.py)
   * Metrics
   * [Perceptron](https://github.com/CatalaniCD/machine_learning/blob/main/perceptron.py)
-     - [Function Approximation w/MLP]((https://github.com/CatalaniCD/machine_learning/blob/main/func_approximation.py)
+     - [Function Approximation w/MLP](https://github.com/CatalaniCD/machine_learning/blob/main/func_approximation.py)
   * [SGD Perceptron](https://github.com/CatalaniCD/machine_learning/blob/main/perceptron_sgd.py)
   * [SVM - Support Vector Machine](https://github.com/CatalaniCD/machine_learning/blob/main/support_vector_machine.py)
   * [Linear Regression w/gradient descent](https://github.com/CatalaniCD/machine_learning/blob/main/linear_regression.py)
