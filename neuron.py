@@ -26,9 +26,10 @@ import numpy as np
 # data visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+# 3d visualization
+from mpl_toolkits.mplot3d import Axes3D
+# time
 import time
-
 
 # =============================================================================
 # Neuron Class
@@ -180,8 +181,76 @@ class Neuron():
         pass
 
 # =============================================================================
+# functions
+# =============================================================================
+
+def visualize_activation():
+    
+    neuron = Neuron()    
+    
+    x0 = np.linspace(-50, 50, 100)
+    x1 = np.linspace(-50, 50, 100)
+    
+    preds = pd.DataFrame()
+    for i in x0:
+        for j in x1:
+            preds.loc[i, j] = neuron.forward_prop(X_ = [i, j])
+            
+    xv, yv = np.meshgrid(preds.index, preds.columns)
+    z = preds
+    
+    fig = plt.figure(figsize = (8, 8))  
+    axes = fig.gca(projection ='3d')
+    axes.azim = 45
+    axes.elev = 35
+    maps = { 0 : 'afmhot', 1 : 'coolwarm', 2 : 'viridis', 3 : 'binary', 4 : 'jet'}
+    axes.plot_surface(xv, yv, z, cmap = maps[4]) 
+    plt.title('Sigmoid Activation 3D Visualization')
+    plt.xlabel('X Axis')
+    plt.ylabel('Y Axis')
+    plt.show() 
+    
+def visualize_cost_function(X, y):
+        
+    f = scipy.interpolate.interp2d(x = X[:, 0], 
+                                   y = X[:, 1], 
+                                   z = y,
+                                   kind = 'cubic', # {‘linear’, ‘cubic’, ‘quintic’},
+                                   )
+    
+    neuron = Neuron()    
+    
+    x0 = np.linspace(-X[:, 0].min(), X[:, 0].max(), 100)
+    x1 = np.linspace(-X[:, 1].min(), X[:, 1].max(), 100)
+    
+    loss = pd.DataFrame()
+    for i in x0:
+        for j in x1:
+            pred = neuron.forward_prop(X_ = [i, j])
+            loss.loc[i, j] = neuron.loss_function(y = f(i, j)[0], y_hat = pred)
+    
+    xv, yv = np.meshgrid(loss.index, loss.columns)
+    z = loss
+    
+    # normalize values
+    z = z.replace(z[z > np.percentile(z, 99.9)].values, np.percentile(z, 99.9))
+    
+    fig = plt.figure(figsize = (8, 8))  
+    axes = fig.gca(projection ='3d')
+    axes.azim = 45
+    axes.elev = 35
+    maps = { 0 : 'afmhot', 1 : 'coolwarm', 2 : 'viridis', 3 : 'binary', 4 : 'jet'}
+    axes.plot_surface(xv, yv, z, cmap = maps[4]) 
+    plt.title('Interpolated Cost Function 3D Visualization')
+    plt.xlabel('X Axis')
+    plt.ylabel('Y Axis')
+    plt.show() 
+
+# =============================================================================
 # program test
 # =============================================================================
+
+
 
 if __name__ == '__main__':
     
@@ -192,6 +261,9 @@ if __name__ == '__main__':
     
     # y = pd.Series(y).replace(0, -1).values
     
+    visualize_cost_function(X = X, y = y)
+    
+    visualize_activation()
     
     # standard scaling
     # X = pd.DataFrame(X)
