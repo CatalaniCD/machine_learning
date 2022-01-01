@@ -212,22 +212,17 @@ def visualize_activation():
     
 def visualize_cost_function(X, y):
         
-    f = scipy.interpolate.interp2d(x = X[:, 0], 
-                                   y = X[:, 1], 
-                                   z = y,
-                                   kind = 'cubic', # {‘linear’, ‘cubic’, ‘quintic’},
-                                   )
-    
     neuron = Neuron()    
     
-    x0 = np.linspace(-X[:, 0].min(), X[:, 0].max(), 100)
-    x1 = np.linspace(-X[:, 1].min(), X[:, 1].max(), 100)
+    w0 = np.linspace(-5, 5, 100)
+    w1 = np.linspace(-5, 5, 100)
     
     loss = pd.DataFrame()
-    for i in x0:
-        for j in x1:
-            pred = neuron.forward_prop(X_ = [i, j])
-            loss.loc[i, j] = neuron.loss_function(y = f(i, j)[0], y_hat = pred)
+    for i in w0:
+        for j in w1:
+            neuron.weights = [i, j]
+            pred = neuron.forward_prop(X_ = X[0])
+            loss.loc[i, j] = neuron.loss_function(y = y[0], y_hat = pred)
     
     xv, yv = np.meshgrid(loss.index, loss.columns)
     z = loss
@@ -242,8 +237,8 @@ def visualize_cost_function(X, y):
     maps = { 0 : 'afmhot', 1 : 'coolwarm', 2 : 'viridis', 3 : 'binary', 4 : 'jet'}
     axes.plot_surface(xv, yv, z, cmap = maps[4]) 
     plt.title('Interpolated Cost Function 3D Visualization')
-    plt.xlabel('X Axis')
-    plt.ylabel('Y Axis')
+    plt.xlabel('w0 Axis')
+    plt.ylabel('w1 Axis')
     plt.show() 
 
 # =============================================================================
