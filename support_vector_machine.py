@@ -107,7 +107,7 @@ if __name__ == '__main__':
         # evaluate the decision boundary
         support_distance = np.mean(loss) + reg_lambda * np.linalg.norm(W) ** 2
             
-        if support_distance <= 1:
+        if support_distance <= 2:
             
             # update decision boundary
             W = W + learning_rate * ( ( y_ * X_) - (2 * reg_lambda * W ))
@@ -132,8 +132,8 @@ if __name__ == '__main__':
     
 
     print('Accuracy Score : ', 1 - (error/ L))
+    print('Support Distance : ', support_distance )              
 
-              
     # calc and plot decision boundary
     min_x1, max_x1 = X_test[:, 0].min(), X_test[:, 0].max()
     
